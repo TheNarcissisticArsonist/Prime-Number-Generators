@@ -7,7 +7,7 @@ next.addEventListener("click", nextPrime);
 
 document.addEventListener("keydown", function(event) {
   console.log(event.which);
-  if(event.which = 13) {
+  if(event.which == 13) {
     nextPrime();
   }
 });
