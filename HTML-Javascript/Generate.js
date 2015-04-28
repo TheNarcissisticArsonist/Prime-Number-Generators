@@ -31,4 +31,5 @@ function nextPrime() {
     }
   }
   div.innerHTML = primes.join(", ");
+  document.getElementById("current").innerHTML = primes.length;
 }
