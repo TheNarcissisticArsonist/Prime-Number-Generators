@@ -40,6 +40,30 @@ next100000.addEventListener("click", function() {
   }
 });
 
+nextx = document.getElementById("nextx");
+nextx.addEventListener("click", function() {
+  num = prompt("How many primes would you like to generate?");
+  if(num == NaN) {
+    return;
+  }
+  for(j=0; j<num; j++) {
+    nextPrime();
+  }
+});
+
+nextto = document.getElementById("nextto");
+nextto.addEventListener("click", function() {
+  finalNum = prompt("What would you like to bring the total number of primes generated to?");
+  if(finalNum == NaN) {
+    return;
+  }
+  currentNum = primes.length;
+  num = finalNum - currentNum;
+  for(j=0; j<num; j++) {
+    nextPrime();
+  }
+});
+
 document.addEventListener("keydown", function(event) {
   console.log(event.which);
   if(event.which == 13) {
