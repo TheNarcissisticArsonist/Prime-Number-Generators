@@ -78,7 +78,11 @@ function nextPrime() {
   while(!foundNext) {
     currentNum++;
     broke = false;
+    maxTest = Math.ceil(Math.sqrt(currentNum));
     for(i=0; i<primes.length; i++) {
+      if(primes[i] > maxTest) {
+        break;
+      }
       if(currentNum % primes[i] == 0) {
         broke = true;
         break;
